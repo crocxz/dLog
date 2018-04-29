@@ -48,16 +48,22 @@ export default class Inventory extends React.Component {
           floatingLabelText="search"
           value={this.state.field}
           onChange={e => this.change(e)}
-          floatingLabelFixed
+          floatingLabelFixed  
         />
+
         <IconButton tooltip="Search">
             <FontIcon className="muidocs-icon-action-home" />
-         </IconButton>
-         <RaisedButton label="Upload" onClick={e => this.onSubmit(e)} primary />
+          
+        </IconButton>
+
+
+        <RaisedButton label="Upload" onClick={e => this.onSubmit(e)} primary />
 
 
          <Table onRowSelection={this.handleRowSelection}
-         multiSelectable={true}>
+         multiSelectable={true}
+          style={{textAlign: 'center'}}
+         >
         <TableHeader>
           <TableRow>
             <TableHeaderColumn>Product Name</TableHeaderColumn>
@@ -72,8 +78,8 @@ export default class Inventory extends React.Component {
           <TableRow selected={this.isSelected(0)}>
             <TableRowColumn>2x2 Wood boards</TableRowColumn>
             <TableRowColumn>0D4DQ7D12</TableRowColumn>
-            <TableRowColumn>Employed</TableRowColumn>
-            <TableRowColumn>50</TableRowColumn>
+            <TableRowColumn>50 Boards</TableRowColumn>
+            <TableRowColumn>$20</TableRowColumn>
             <TableRowColumn>Sandalwood, mfc'd in Cuba ..</TableRowColumn>
             <TableRowColumn>1</TableRowColumn>
             <IconButton tooltip="Font Icon">
@@ -83,27 +89,81 @@ export default class Inventory extends React.Component {
           <TableRow selected={this.isSelected(1)}>
           <TableRowColumn>2x2 Wood boards</TableRowColumn>
             <TableRowColumn>0D4DQ7D12</TableRowColumn>
-            <TableRowColumn>Employed</TableRowColumn>
-            <TableRowColumn>50</TableRowColumn>
-            <TableRowColumn>Sandalwood, mfc'd in Cuba ..</TableRowColumn>
+            <TableRowColumn>50 Boards</TableRowColumn>
+            <TableRowColumn>$20</TableRowColumn>
+            <TableRowColumn>Maple Wood, mfc'd in Canada.</TableRowColumn>
             <TableRowColumn>1</TableRowColumn>
             <IconButton tooltip="Font Icon">
             <FontIcon className="muidocs-icon-action-home" />
             </IconButton>
           </TableRow>
+       
           <TableRow selected={this.isSelected(2)}>
-            <TableRowColumn>3</TableRowColumn>
-            <TableRowColumn>Stephanie Sanders</TableRowColumn>
-            <TableRowColumn>Employed</TableRowColumn>
+            <TableRowColumn>6ft by 10ft fence (Blue Color)</TableRowColumn>
+            <TableRowColumn>734982</TableRowColumn>
+            <TableRowColumn>300 Fences</TableRowColumn>
+            <TableRowColumn>$15 per day</TableRowColumn>
+            <TableRowColumn>Steel Construction</TableRowColumn>
+            <TableRowColumn>1</TableRowColumn>
+            <IconButton tooltip="Font Icon">
+            <FontIcon className="muidocs-icon-action-home" />
+            </IconButton>
           </TableRow>
+
+
           <TableRow selected={this.isSelected(3)}>
-            <TableRowColumn>4</TableRowColumn>
-            <TableRowColumn>Steve Brown</TableRowColumn>
-            <TableRowColumn>Employed</TableRowColumn>
+            <TableRowColumn>6ft by 10ft fence (Grey Color)</TableRowColumn>
+            <TableRowColumn>734983</TableRowColumn>
+            <TableRowColumn>100 Fences</TableRowColumn>
+            <TableRowColumn>$20 per day</TableRowColumn>
+            <TableRowColumn>Steel Construction</TableRowColumn>
+            <TableRowColumn>1</TableRowColumn>
+            <IconButton tooltip="Font Icon">
+            <FontIcon className="muidocs-icon-action-home" />
+            </IconButton>
           </TableRow>
+
+          <TableRow selected={this.isSelected(4)}>
+            <TableRowColumn>8ft by 10ft fence (Blue Color)</TableRowColumn>
+            <TableRowColumn>734983</TableRowColumn>
+            <TableRowColumn>250 Fences</TableRowColumn>
+            <TableRowColumn>$20 per day</TableRowColumn>
+            <TableRowColumn>Steel Construction</TableRowColumn>
+            <TableRowColumn>1</TableRowColumn>
+            <IconButton tooltip="Font Icon">
+            <FontIcon className="muidocs-icon-action-home" />
+            </IconButton>
+          </TableRow>
+
+          <TableRow selected={this.isSelected(5)}>
+            <TableRowColumn>Scissor Lift</TableRowColumn>
+            <TableRowColumn>784927</TableRowColumn>
+            <TableRowColumn>5 Lifts</TableRowColumn>
+            <TableRowColumn>$2000 per day</TableRowColumn>
+            <TableRowColumn>Maximum Height of 60ft</TableRowColumn>
+            <TableRowColumn>1</TableRowColumn>
+            <IconButton tooltip="Font Icon">
+            <FontIcon className="muidocs-icon-action-home" />
+            </IconButton>
+          </TableRow>
+
+            <TableRow selected={this.isSelected(6)}>
+            <TableRowColumn>Waste Disposal Service</TableRowColumn>
+            <TableRowColumn>734554</TableRowColumn>
+            <TableRowColumn>8 Bins</TableRowColumn>
+            <TableRowColumn>$300 Per Bin, $150 Per Disposal</TableRowColumn>
+            <TableRowColumn>Volume of 8 Cubic Meters</TableRowColumn>
+            <TableRowColumn>1</TableRowColumn>
+            <IconButton tooltip="Font Icon">
+            <FontIcon className="muidocs-icon-action-home" />
+            </IconButton>
+          </TableRow>
+
+          
+
         </TableBody>
       </Table>
-      <RaisedButton label="Create Request" onClick={e => this.onSubmit(e)} primary />
+      <RaisedButton label="Create Quote" onClick={e => this.onSubmit(e)} primary />
     </div>
     );}
 }
