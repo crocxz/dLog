@@ -45,7 +45,7 @@ export default class Main extends React.Component {
         </Tab>
         <Tab label="View" value="c">
           <div>
-          <h2 style={styles.headline}>Pending</h2>
+          <h2 style={styles.headline}>Completed</h2>
            <View />
           </div>
         </Tab>
