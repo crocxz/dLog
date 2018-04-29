@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Main from "./containers/Main";
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Login from "./containers/Login";
+import Create from "./containers/Create";
 
 class App extends Component {
   
@@ -11,7 +12,7 @@ class App extends Component {
       <MuiThemeProvider>
       <BrowserRouter>
         <Switch>
-          <Route exact path='/' component={Login} />
+          <Route exact path='/' component={Create} />
           <Route exact path='/main' component={Main} />
         </ Switch>
         
