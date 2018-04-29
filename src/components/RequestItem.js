@@ -1,10 +1,8 @@
 import React from 'react';
-import Avatar from 'material-ui/Avatar';
-import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
 
-export default class Login extends React.Component {
-
+export default class RequestItem extends React.Component {
+//RI should have Date, Entry ID, Contact, Total Cost, Public
 state = {
     username: "",
     password: "",
